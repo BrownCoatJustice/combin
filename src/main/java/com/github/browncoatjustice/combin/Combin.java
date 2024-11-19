@@ -6,6 +6,7 @@ package com.github.browncoatjustice.combin;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.rmi.UnexpectedException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -113,7 +114,7 @@ public class Combin {
      * @param n The size of the binary combination.
      * @param current The current combination being generated.
      */
-    public static void generateOutcomes(short n, String current) {
+    private static void generateOutcomes(short n, String current) {
         generateOutcomes(n, current, null, null); // Default to console output and no filename
     }
 
@@ -125,7 +126,7 @@ public class Combin {
      * @param current The current combination being generated.
      * @param filename The filename to save the results to (if provided).
      */
-    public static void generateOutcomes(short n, String current, String filename) {
+    private static void generateOutcomes(short n, String current, String filename) {
         generateOutcomes(n, current, filename, null); // Only file output
     }
 
@@ -138,7 +139,7 @@ public class Combin {
      * @param filename The filename to save the results to (if provided).
      * @param printToConsole Whether to print results to the console (if true).
      */
-    public static void generateOutcomes(short n, String current, String filename, Boolean printToConsole) {
+    private static void generateOutcomes(short n, String current, String filename, Boolean printToConsole) {
         // Base case: when n is 0, the combination is complete
         if (n == 0) {
             try {
@@ -146,6 +147,8 @@ public class Combin {
                 if (filename != null) {
                     try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename, true))) {
                         writer.write(current + "\n");
+                    } catch(UnexpectedException e) {
+                        e.getCause();
                     }
                 }
                 if (printToConsole != null && printToConsole) {
