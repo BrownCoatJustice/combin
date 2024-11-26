@@ -94,13 +94,6 @@ Generated combinations:
 
 ---
 
-## Author
-
-- **Habis Muhammed**  
-GitHub: [BrownCoatJustice](https://github.com/BrownCoatJustice)  
-
----
-
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
