@@ -1,6 +1,6 @@
 # combin: Binary Combiner
 
-`combin` is a Java-based utility to generate all possible binary combinations of a given size `n`. It offers flexible output options: print results to the console, save them to a file, or store them in memory.
+`combin` is a Java utility to generate all possible binary combinations of a given size `n`. It offers flexible output options: print results to the console, save them to a file, or store them in memory.
 
 ## Features
 
