@@ -45,7 +45,7 @@ java Combin <size> [bin0] [bin1] [filename] [console]
 ### Default Binary Output
 Generate all binary combinations of size 3 and print them to the console:
 ```bash
-java Combin 3 console
+java Combin 3 1 0
 ```
 
 ### Custom Characters
@@ -79,7 +79,7 @@ java Combin 4 0 1 output.txt console
 
 ### Command:
 ```bash
-java Combin 2 console
+java Combin 2 1 0 console
 ```
 
 ### Output:
